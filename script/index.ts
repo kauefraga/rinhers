@@ -129,7 +129,7 @@ function generateRinhersOutput(results: Awaited<ReturnType<typeof fetchChunks>>)
   green(`👍 ${successful.length} rinhers tão ok`);
   yellow(
     `😭 ${failed.length} rinhers ficaram de fora`
-    + showErrors ? ' (use a flag --errors para ver o que ocorreu)' : ''
+    + (showErrors ? '' : ' (use a flag --errors para ver o que ocorreu)')
   );
 
   return {
