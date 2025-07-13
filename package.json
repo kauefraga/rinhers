@@ -1,0 +1,13 @@
+{
+  "name": "rinhers",
+  "private": true,
+  "scripts": {
+    "gen": "bun run script/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
