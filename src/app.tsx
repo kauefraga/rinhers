@@ -19,6 +19,7 @@ export function App() {
     || r.langs.map(l => l.toLowerCase()).includes(search)
     || r['source-code-repo'].toLowerCase().includes(search),
   );
+  const hasResults = filteredRinhers.length > 0;
 
   return (
     <>
@@ -48,9 +49,10 @@ export function App() {
 
           <div className="flex items-center gap-5">
             <SearchInput
-              placeholder="Digite o nome da submissão..."
+              placeholder="Participante, nome da submissão, linguagens..."
               onChange={(e) => { setSearch(e.target.value); }}
               value={search}
+              hasResults={hasResults}
             />
 
             <div className="text-right">
@@ -68,7 +70,15 @@ export function App() {
           </div>
 
           <ul className="my-5">
-            {filteredRinhers.map(r => <li>{r.name}</li>)}
+            {filteredRinhers.map(r => (
+              <li key={r['source-code-repo']}>
+                {r.name}
+                {' '}
+                (
+                {r.langs.join(', ').toLowerCase()}
+                )
+              </li>
+            ))}
           </ul>
 
           <Alert>

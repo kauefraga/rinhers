@@ -1,11 +1,18 @@
 import type { InputHTMLAttributes } from 'react';
 
-export function SearchInput({ ...props }: InputHTMLAttributes<HTMLInputElement>) {
-  // TODO data-has-results vindo do pai
-  // data-[has-results=true]:border-green-500
-  // border-red-500
+interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  hasResults: boolean;
+}
+
+/**
+ * Define `data-has-results` with a boolean to show red when there are no search results.
+ * */
+export function SearchInput({ hasResults = true, ...props }: SearchInputProps) {
   return (
-    <div className="flex items-center border-2 rounded-xl px-3 py-2 flex-1 transition-all hover:rounded-none focus-within:rounded-none focus-within:border-blue-500">
+    <div
+      data-has-results={hasResults}
+      className="flex items-center border-2 rounded-xl px-3 py-2 flex-1 transition-all hover:rounded-none focus-within:rounded-none focus-within:border-blue-500 data-[has-results=false]:border-red-500"
+    >
       <input
         type="text"
         className="border-none outline-none flex-1 ml-2"
