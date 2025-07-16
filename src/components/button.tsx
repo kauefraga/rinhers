@@ -6,7 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, ...props }: ButtonProps) {
   return (
-    <button className="border-2 border-white rounded-xl px-8 py-2 hover:cursor-pointer transition-all hover:border-black active:border-dashed" {...props}>
+    <button disabled title="Em breve..." className="border-2 border-white rounded-xl px-8 py-2 hover:cursor-pointer transition-all text-black/80 hover:border-black/50 active:border-dashed" {...props}>
       {children}
     </button>
   );

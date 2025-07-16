@@ -7,7 +7,7 @@ export function Header() {
       <h1 className="text-2xl font-bold">Rinhers™</h1>
 
       <div className="flex gap-8">
-        <Button disabled title="Em breve...">
+        <Button>
           Atualizar
         </Button>
 
