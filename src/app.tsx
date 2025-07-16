@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Alert } from './components/alert';
 import { Header } from './components/header';
+import { Link } from './components/link';
 import { SearchInput } from './components/search-input';
 
 import r from '../rinhers.json';
@@ -18,7 +20,7 @@ export function App() {
   );
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex flex-col mt-3 h-dvh">
+    <div className="w-full max-w-5xl mx-auto flex flex-col mt-3">
       <Header />
 
       <main>
@@ -29,28 +31,19 @@ export function App() {
             A rinha de Back end é uma competição super divertida.
             Veja mais sobre a Rinha 2025 no
             {' '}
-            <a
-              href="https://github.com/zanfranceschi/rinha-de-backend-2025"
-              target="_blank"
-              className="underline decoration-2 decoration-blue-500 hover:decoration-dashed"
-            >
+            <Link href="https://github.com/zanfranceschi/rinha-de-backend-2025">
               repositório oficial
-            </a>
+            </Link>
             {' '}
             e no
             {' '}
-            <a
-              href="https://x.com/search?q=rinha%20de%20backend"
-              target="_blank"
-              className="underline decoration-2 decoration-blue-500 hover:decoration-dashed"
-            >
+            <Link href="https://x.com/search?q=rinha%20de%20backend">
               Twitter
-            </a>
+            </Link>
             .
           </p>
         </div>
 
-        {/* search bar and rinhers count */}
         <div className="flex items-center gap-5">
           <SearchInput
             placeholder="Digite o nome da submissão..."
@@ -76,23 +69,23 @@ export function App() {
           {filteredRinhers.map(r => <li>{r.name}</li>)}
         </ul>
 
-        <div role="alert" className="mt-3 relative flex w-full p-3 text-sm text-slate-600 border border-slate-300 rounded-lg">
+        <Alert>
           Essas informações foram todas tiradas do arquivo
           {' '}
-          <code className="px-0.5">`info.json`</code>
+          <code>`info.json`</code>
           , adotado na edição 2025 da Rinha de Backend.
-        </div>
+        </Alert>
 
-        <div role="alert" className="mt-3 relative flex w-full p-3 text-sm text-slate-600 border border-yellow-500 bg-yellow-50 rounded-lg font-regular">
+        <Alert type="warning">
           *
           {' '}
           {summary.failed_downloads}
           {' '}
           Rinhers sem o arquivo
           {' '}
-          <code className="px-0.5">`info.json`</code>
+          <code>`info.json`</code>
           , que não estão inclusos na contagem 🙁
-        </div>
+        </Alert>
       </main>
 
       <footer></footer>
