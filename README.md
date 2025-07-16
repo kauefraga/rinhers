@@ -12,6 +12,13 @@ Conheça os participantes e suas soluções da [Rinha de Back end 2025](https://
 
 </div>
 
+## Funcionalidades
+
+- Ver os participantes em uma interface intuitiva, descontraída e responsiva
+- Pesquisar e filtrar resultados por nome, linguagem de programação ou tecnologias usadas
+- Trocar entre o tema claro e escuro
+- Gerar `rinhers.json` semi-automaticamente
+
 ## Como rodar localmente
 
 Tenha o [bun](https://bun.sh) instalado na sua máquina. Node.js e NPM também funciona.
