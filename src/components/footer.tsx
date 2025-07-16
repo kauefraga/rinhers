@@ -3,7 +3,7 @@ import { Link } from './link';
 export function Footer() {
   return (
     <footer className="mt-5 border-t-2 border-slate-600">
-      <div className="w-full max-w-5xl mx-auto flex justify-between py-4">
+      <div className="w-full max-w-5xl mx-auto flex justify-between p-5">
         <p>
           Feito por
           {' '}

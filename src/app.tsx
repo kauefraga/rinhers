@@ -15,19 +15,19 @@ export function App() {
   const [search, setSearch] = useState('');
 
   const filteredRinhers = rinhers.filter(r =>
-    r.name.toLowerCase().includes(search)
-    || r.langs.map(l => l.toLowerCase()).includes(search)
-    || r['source-code-repo'].toLowerCase().includes(search),
+    r.name.toLowerCase().includes(search.toLowerCase())
+    || r.langs.map(l => l.toLowerCase()).includes(search.toLowerCase())
+    || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
   );
   const hasResults = filteredRinhers.length > 0;
 
   return (
     <>
-      <div className="w-full max-w-5xl mx-auto flex flex-col mt-3">
+      <div className="w-full max-w-5xl mx-auto flex flex-col p-5">
         <Header />
 
         <main>
-          <div className="flex items-center max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center max-w-3xl mx-auto">
             <img src="/banner.jpg" alt="Banner da Rinha de Back end escrito 'Rinha de Back end'" width="400" height="250" />
 
             <p>
@@ -47,7 +47,7 @@ export function App() {
             </p>
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex flex-col my-8 md:flex-row items-center gap-5">
             <SearchInput
               placeholder="Participante, nome da submissão, linguagens..."
               onChange={(e) => { setSearch(e.target.value); }}
@@ -55,7 +55,7 @@ export function App() {
               hasResults={hasResults}
             />
 
-            <div className="text-right">
+            <div className="text-center md:text-right">
               <p>
                 {summary.successful_downloads}
                 {' '}
