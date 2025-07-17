@@ -3,7 +3,9 @@ import { Alert } from './components/alert';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { Link } from './components/link';
+import { RinherCard } from './components/rinher-card';
 import { SearchInput } from './components/search-input';
+import type { Rinher } from './types/rinher';
 
 import r from '../rinhers.json';
 
@@ -18,7 +20,7 @@ export function App() {
     r.name.toLowerCase().includes(search.toLowerCase())
     || r.langs.map(l => l.toLowerCase()).includes(search.toLowerCase())
     || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
-  );
+  ) as Rinher[];
   const hasResults = filteredRinhers.length > 0;
 
   return (
@@ -69,16 +71,12 @@ export function App() {
             </div>
           </div>
 
-          <ul className="my-5">
-            {filteredRinhers.map(r => (
-              <li key={r['source-code-repo']}>
-                {r.name}
-                {' '}
-                (
-                {r.langs.join(', ').toLowerCase()}
-                )
-              </li>
-            ))}
+          <ul className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4">
+            {
+              filteredRinhers.map(r => (
+                <RinherCard key={r['source-code-repo']} rinher={r} />
+              ))
+            }
           </ul>
 
           <Alert>
