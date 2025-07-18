@@ -1,4 +1,5 @@
 import fs from 'fs/promises';
+import stripJsonComments from 'strip-json-comments';
 import { gray, green, yellow } from './colors';
 import { DEFAULT_REPO, headers, showErrors } from './config';
 
@@ -21,6 +22,40 @@ type DirectoryEntry = {
 type Repository = {
   owner: string,
   repo: string,
+}
+
+/**
+ * Fetches and parses the markdown table of partial results.
+ * Returns an object mapping slug -> results
+ */
+async function fetchPartialResults() {
+  const res = await fetch('https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/PREVIA_RESULTADOS.md');
+  if (!res.ok) throw new Error(`Failed to fetch PREVIA_RESULTADOS.md: ${res.statusText}`);
+  const md = await res.text();
+
+  const lines = md
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l.startsWith('|') && !l.startsWith('| --'));
+
+  if (lines.length < 2) return {};
+
+  lines.shift(); // Remove header
+
+  const results: Record<string, any> = {};
+  for (const line of lines) {
+    const cols = line.split('|').map(c => c.trim()).filter(Boolean);
+    // Table columns: [slug, p99, bonus, multa, lucro]
+    const slug = cols[0];
+    if (!slug) continue;
+    results[slug] = {
+      p99: cols[1],
+      bonus: cols[2],
+      multa: cols[3],
+      lucro: cols[4]
+    };
+  }
+  return results;
 }
 
 /**
@@ -58,9 +93,16 @@ function splitInChunks(urls: FileUrls, concurrency: number) {
   return chunks;
 }
 
+/**
+ * Remove JS-style comments and trailing commas from a JSON string
+ */
+function sanitizeJson(text: string): string {
+  return stripJsonComments(text, { whitespace: false });
+}
+
 type FilePathsChunks = ReturnType<typeof splitInChunks>;
 
-async function fetchChunks(chunks: FilePathsChunks, filesNumber: number, concurrency: number) {
+async function fetchChunks(chunks: FilePathsChunks, filesNumber: number, concurrency: number, partialResults: Record<string, any>) {
   const results = [];
 
   for (const chunk of chunks) {
@@ -73,7 +115,15 @@ async function fetchChunks(chunks: FilePathsChunks, filesNumber: number, concurr
         }
 
         const text = await response.text();
-        const jsonData = JSON.parse(text);
+        const sanitized = sanitizeJson(text);
+        const jsonData = JSON.parse(sanitized);
+
+        const slugMatch = fileDownloadUrl.match(/participantes\/([^/]+)\//);
+        const slug = slugMatch ? slugMatch[1] : undefined;
+
+        if (slug && partialResults[slug]) {
+          jsonData.partialResults = partialResults[slug];
+        }
 
         return {
           success: true,
@@ -153,7 +203,8 @@ const infoJsonUrls = mapParticipantsToInfoJsonUrls(DEFAULT_REPO, participants);
 const concurrency = 10;
 
 const chunks = splitInChunks(infoJsonUrls, concurrency);
-const results = await fetchChunks(chunks, infoJsonUrls.length, concurrency);
+const partialResults = await fetchPartialResults();
+const results = await fetchChunks(chunks, infoJsonUrls.length, concurrency, partialResults);
 
 const output = generateRinhersOutput(results);
 
