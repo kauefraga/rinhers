@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Rinher } from '../types/rinher';
+import { preprocessRinher } from '../utils/preprocess-rinher';
 import { SmartIcon } from './smart-icon';
 import { PartialResultsModal } from './partial-results-modal';
 
@@ -10,30 +11,38 @@ interface RinherCardProps {
 export function RinherCard({ rinher }: RinherCardProps) {
   const [showModal, setShowModal] = useState(false);
 
-  const technologies = rinher.langs?.join(',')
-    + ',' + rinher.storages?.join(',')
-    + ',' + rinher['load-balancers']?.join(',')
-    + ',' + rinher.messaging?.join(',');
-
-  const githubUser = rinher['source-code-repo']
-    .substring(8) // removes https://
-    .split('/')[1]; // split in 3, assuming github.com [0] / user [1] / repo [2]
-
-  const profileImage = `https://github.com/${githubUser}.png`;
-  const partialResults = rinher.partialResults;
+  const {
+    profileImage,
+    name,
+    submission,
+    technologies,
+    'source-code-repo': sourceCodeRepo,
+    social,
+    partialResults,
+  } = preprocessRinher(rinher);
 
   return (
-    <>
-      <li className="flex flex-col gap-5 border-2 rounded-xl p-6 transition-all hover:rounded-none">
-        <div className="flex items-center gap-3">
-          <img
-            src={profileImage}
-            alt="Foto de perfil"
-            className="h-12 rounded"
-            loading="lazy"
-          />
-          <h3 className="font-medium">{rinher.name}</h3>
-          {partialResults
+    <li className="flex flex-col justify-center gap-6 border-2 rounded-xl px-6 py-4 transition-all hover:rounded-none">
+      <div className="flex items-center gap-3">
+        <img
+          src={`https://skillicons.dev/icons?i=${technologies}`}
+          alt="Ícones das tecnologias"
+          loading="lazy"
+          className="h-8 self-start"
+        />
+
+        <div>
+          <h3 className="font-medium">{name}</h3>
+          <a
+            href={submission.link}
+            target="_blank"
+            className="text-sm text-black/50 hover:text-black/70 dark:text-white/50 dark:hover:text-white/70"
+          >
+            {submission.name}
+          </a>
+        </div>
+
+        {partialResults
             && (
               <button
                 onClick={() => { setShowModal(true); }}
@@ -54,25 +63,24 @@ export function RinherCard({ rinher }: RinherCardProps) {
                 </svg>
               </button>
             )}
-        </div>
+      </div>
 
-        <img
-          src={`https://skillicons.dev/icons?i=${technologies}`}
-          alt="Ícones das tecnologias"
-          loading="lazy"
-          className="h-8 self-start"
-        />
+      <img
+        src={`https://skillicons.dev/icons?i=${technologies.join(',')}`}
+        alt="Ícones das tecnologias"
+        loading="lazy"
+        className="h-8 self-start"
+      />
 
-        <div className="flex justify-between">
-          <a href={rinher['source-code-repo']}><code>Source code</code></a>
+      <div className="flex justify-between">
+        <a href={sourceCodeRepo} target="_blank"><code>Source code</code></a>
 
-          <div className="flex gap-4">
-            {rinher.social.map(s => <a href={s}><SmartIcon key={s} src={s} /></a>)}
-          </div>
+        <div className="flex gap-4">
+          {social.map(s => <a key={s} href={s}><SmartIcon src={s} /></a>)}
         </div>
       </li>
 
       <PartialResultsModal show={!!(partialResults && showModal)} onClose={() => { setShowModal(false); }} rinher={rinher} />
     </>
   );
-}
+};

@@ -1,3 +1,4 @@
+import { SearchIcon } from 'lucide-react';
 import type { InputHTMLAttributes } from 'react';
 
 interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -15,10 +16,10 @@ export function SearchInput({ hasResults = true, ...props }: SearchInputProps) {
     >
       <input
         type="text"
-        className="border-none outline-none flex-1 ml-2"
+        className="border-none outline-none flex-1 ml-2 placeholder-black/50 dark:placeholder-white/50"
         {...props}
       />
-      <img src="/search.svg" alt="lupa" width="32" height="32" />
+      <SearchIcon />
     </div>
   );
 }
