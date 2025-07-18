@@ -31,7 +31,7 @@ export function PartialResultsChart({ chartData }: { chartData: { name: string; 
         <Tooltip content={<CustomTooltip />} />
         <Bar dataKey="value">
           {chartData.map((_, index) => (
-            <Cell key={`cell-${String(index)}`} fill={barColors[index % barColors.length]} radius={[8, 8, 0, 0]} />
+            <Cell key={`cell-${String(index)}`} fill={barColors[index % barColors.length]} />
           ))}
         </Bar>
       </BarChart>
