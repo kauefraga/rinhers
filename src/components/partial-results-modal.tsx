@@ -23,7 +23,7 @@ export function PartialResultsModal({ show, onClose, rinher }: PartialResultsMod
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40">
-      <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 min-w-[400px] max-w-xs relative">
+      <div className="bg-white dark:bg-slate-900 rounded-xl p-6 min-w-[400px] max-w-xs relative">
         <button
           className="absolute top-3 right-6 text-2xl text-neutral-400 hover:text-neutral-800 cursor-pointer"
           onClick={onClose}
@@ -34,7 +34,7 @@ export function PartialResultsModal({ show, onClose, rinher }: PartialResultsMod
 
         <div className="mb-5">
           <p className="font-medium">{name}</p>
-          <p className="text-sm text-black/50">{langs?.join(', ')}</p>
+          <p className="text-sm text-black/50 dark:text-white/50">{langs?.join(', ')}</p>
         </div>
 
         <div className="mb-5">
