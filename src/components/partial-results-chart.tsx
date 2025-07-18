@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { resultDescriptions } from '../utils/result-descriptions';
 
 const barColors = ['#2563eb', '#ea580c', '#ef4444', '#22c55e'];
@@ -24,7 +24,7 @@ export function PartialResultsChart({ chartData }: { chartData: { name: string; 
   };
 
   return (
-    <ResponsiveContainer width={260} height={200}>
+    <ResponsiveContainer width={350} height={200}>
       <BarChart data={chartData}>
         <XAxis dataKey="name" fontSize={12} />
         <YAxis fontSize={12} />

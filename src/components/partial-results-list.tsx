@@ -3,6 +3,7 @@ import { resultDescriptions } from '../utils/result-descriptions';
 
 export function PartialResultsList({ partialResults }: { partialResults: Rinher['partialResults'] }) {
   if (!partialResults) return null;
+
   return (
     <ul className="grid gap-1 text-xs">
       <li title={resultDescriptions['p99']}>
