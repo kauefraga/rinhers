@@ -2,7 +2,6 @@ import fs from 'fs/promises';
 import stripJsonComments from 'strip-json-comments';
 import { gray, green, yellow } from './colors';
 import { DEFAULT_REPO, headers, showErrors } from './config';
-import { json } from 'stream/consumers';
 
 /* To improve:
   - Use streams to fetch one file at a time, process it and
@@ -124,8 +123,6 @@ async function fetchChunks(chunks: FilePathsChunks, filesNumber: number, concurr
 
         if (slug && partialResults[slug]) {
           jsonData.partialResults = partialResults[slug];
-        } else {
-          jsonData.partialResults = null;
         }
 
         return {
