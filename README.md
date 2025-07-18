@@ -98,6 +98,12 @@ Fique à vontade para contribuir [abrindo uma issue](https://github.com/kauefrag
 5. Sincronize as alterações com o repositório do seu *fork* (`git push`)
 6. Abra um *pull request* especificando o que você fez de forma geral (considerando que as alterações têm seus *commits* descritivos)
 
+### Contribuidores e apoiadores
+
+Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projeto ou por incentivarem a continuação do projeto por meio de doações:
+
+<a href="https://github.com/willy-r"><img width="60" src="https://github.com/willy-r.png" alt="perfil de willy-r" /></a>
+
 ## Licença
 
 Este projeto está sob a licença MIT - Veja a [LICENÇA](LICENSE) para mais informações.
