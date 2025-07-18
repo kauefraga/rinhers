@@ -30,7 +30,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
           <a
             href={submission.link}
             target="_blank"
-            className="text-sm text-slate-500 hover:text-slate-700"
+            className="text-sm text-black/50 hover:text-black/70 dark:text-white/50 dark:hover:text-white/70"
           >
             {submission.name}
           </a>

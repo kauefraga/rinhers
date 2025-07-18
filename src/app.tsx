@@ -24,79 +24,77 @@ export function App() {
 
   return (
     <>
-      <div className="w-full max-w-5xl mx-auto flex flex-col p-5">
-        <Header />
+      <Header />
 
-        <main>
-          <div className="flex flex-col md:flex-row items-center max-w-3xl mx-auto">
-            <img src="/banner.jpg" alt="Banner da Rinha de Back end escrito 'Rinha de Back end'" width="400" height="250" />
+      <main>
+        <div className="flex flex-col md:flex-row items-center max-w-3xl mx-auto">
+          <img src="/banner.png" alt="Banner da Rinha de Back end escrito 'Rinha de Back end'" width="400" height="250" />
 
+          <p>
+            A rinha de Back end é uma competição super divertida.
+            Veja mais sobre a Rinha 2025 no
+            {' '}
+            <Link href="https://github.com/zanfranceschi/rinha-de-backend-2025">
+              repositório oficial
+            </Link>
+            {' '}
+            e no
+            {' '}
+            <Link href="https://x.com/search?q=rinha%20de%20backend">
+              Twitter
+            </Link>
+            .
+          </p>
+        </div>
+
+        <div className="flex flex-col my-8 md:flex-row items-center gap-5">
+          <SearchInput
+            placeholder="Participante, nome da submissão, linguagens..."
+            onChange={(e) => { setSearch(e.target.value); }}
+            value={search}
+            hasResults={hasResults}
+          />
+
+          <div className="text-center md:text-right">
             <p>
-              A rinha de Back end é uma competição super divertida.
-              Veja mais sobre a Rinha 2025 no
+              {summary.successful_downloads}
               {' '}
-              <Link href="https://github.com/zanfranceschi/rinha-de-backend-2025">
-                repositório oficial
-              </Link>
+              Rinhers no momento*
+            </p>
+            <p>
+              Dados de
               {' '}
-              e no
-              {' '}
-              <Link href="https://x.com/search?q=rinha%20de%20backend">
-                Twitter
-              </Link>
-              .
+              {generatedAt}
             </p>
           </div>
+        </div>
 
-          <div className="flex flex-col my-8 md:flex-row items-center gap-5">
-            <SearchInput
-              placeholder="Participante, nome da submissão, linguagens..."
-              onChange={(e) => { setSearch(e.target.value); }}
-              value={search}
-              hasResults={hasResults}
-            />
+        <ul className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4">
+          {
+            filteredRinhers.map(rinher => (
+              <RinherCard key={rinher['source-code-repo']} rinher={rinher} />
+            ))
+          }
+        </ul>
 
-            <div className="text-center md:text-right">
-              <p>
-                {summary.successful_downloads}
-                {' '}
-                Rinhers no momento*
-              </p>
-              <p>
-                Dados de
-                {' '}
-                {generatedAt}
-              </p>
-            </div>
-          </div>
+        <Alert>
+          Essas informações foram todas tiradas do arquivo
+          {' '}
+          <code>`info.json`</code>
+          , adotado na edição 2025 da Rinha de Back end.
+        </Alert>
 
-          <ul className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4">
-            {
-              filteredRinhers.map(rinher => (
-                <RinherCard key={rinher['source-code-repo']} rinher={rinher} />
-              ))
-            }
-          </ul>
-
-          <Alert>
-            Essas informações foram todas tiradas do arquivo
-            {' '}
-            <code>`info.json`</code>
-            , adotado na edição 2025 da Rinha de Backend.
-          </Alert>
-
-          <Alert type="warning">
-            *
-            {' '}
-            {summary.failed_downloads}
-            {' '}
-            Rinhers sem o arquivo
-            {' '}
-            <code>`info.json`</code>
-            , que não estão inclusos na contagem 🙁
-          </Alert>
-        </main>
-      </div>
+        <Alert type="warning">
+          *
+          {' '}
+          {summary.failed_downloads}
+          {' '}
+          Rinhers sem o arquivo
+          {' '}
+          <code>`info.json`</code>
+          , que não estão inclusos na contagem 🙁
+        </Alert>
+      </main>
 
       <Footer />
     </>
