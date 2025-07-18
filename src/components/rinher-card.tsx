@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Rinher } from '../types/rinher';
 import { SmartIcon } from './smart-icon';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { PartialResultsModal } from './partial-results-modal';
 
 interface RinherCardProps {
   rinher: Rinher;
@@ -20,42 +20,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
     .split('/')[1]; // split in 3, assuming github.com [0] / user [1] / repo [2]
 
   const profileImage = `https://github.com/${githubUser}.png`;
-
-  const barColors = ['#2563eb', '#ea580c', '#ef4444', '#22c55e'];
-  const resultDescriptions: Record<string, string> = {
-    'Lucro': 'É sua pontuação final. Equivale ao seu lucro.',
-    'Multa ($)': 'Se o total de inconsistência for maior que zero, há multa de 35%.',
-    'p99': 'É o que determina o bônus por performance.',
-    'Bônus (%)': 'Fórmula: max((11 - p99.valor) * 0.02, 0)',
-  };
   const partialResults = rinher.partialResults;
-  const chartData = partialResults
-    ? [
-        { name: 'p99', value: Number(partialResults.p99.replace('ms', '')) || 0 },
-        { name: 'Bônus (%)', value: Number(partialResults.bonus) || 0 },
-        { name: 'Multa ($)', value: Number(partialResults.multa) || 0 },
-        { name: 'Lucro', value: Number(partialResults.lucro) || 0 },
-      ]
-    : [];
-
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (active && payload && payload.length) {
-      const { name, value } = payload[0].payload;
-      return (
-        <div className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded p-2 shadow text-xs">
-          <b>
-            {name}
-            :
-          </b>
-          {' '}
-          {value}
-          <br />
-          <span className="text-neutral-500">{resultDescriptions[name]}</span>
-        </div>
-      );
-    }
-    return null;
-  };
 
   return (
     <>
@@ -73,10 +38,20 @@ export function RinherCard({ rinher }: RinherCardProps) {
               <button
                 onClick={() => { setShowModal(true); }}
                 title="Ver resultado parcial"
-                className="ml-1 hover:text-blue-600"
-                style={{ fontSize: 18, lineHeight: 1 }}
+                className="ml-1 hover:text-blue-600 text-[18px] leading-[1] cursor-pointer"
               >
-                <span role="img" aria-label="Ver gráfico">📊</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={22}
+                  height={22}
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  className="inline align-middle"
+                >
+                  <rect x="2" y="10" width="3" height="7" rx="1" fill="#2563eb" />
+                  <rect x="8.5" y="6" width="3" height="11" rx="1" fill="#ea580c" />
+                  <rect x="15" y="3" width="3" height="14" rx="1" fill="#22c55e" />
+                </svg>
               </button>
             )}
         </div>
@@ -97,57 +72,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
         </div>
       </li>
 
-      {partialResults && showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-xl p-6 min-w-[300px] max-w-xs relative">
-            <button
-              className="absolute top-2 right-3 text-2xl text-neutral-400 hover:text-neutral-800 cursor-pointer"
-              onClick={() => { setShowModal(false); }}
-              aria-label="Fechar"
-            >
-              ×
-            </button>
-            <div className="font-bold mb-1">{rinher.name}</div>
-            <div className="mb-3 text-[12px] text-neutral-500">{rinher.langs?.join(', ')}</div>
-            <div className="mb-2">
-              <ul className="grid gap-1 text-xs">
-                <li title={resultDescriptions['p99']}>
-                  <b>p99:</b>
-                  {' '}
-                  {partialResults.p99}
-                </li>
-                <li title={resultDescriptions['Bônus (%)']}>
-                  <b>Bônus (%):</b>
-                  {' '}
-                  {partialResults.bonus}
-                </li>
-                <li title={resultDescriptions['Multa ($)']}>
-                  <b>Multa ($):</b>
-                  {' '}
-                  {partialResults.multa}
-                </li>
-                <li title={resultDescriptions['Lucro']}>
-                  <b>Lucro:</b>
-                  {' '}
-                  {partialResults.lucro}
-                </li>
-              </ul>
-            </div>
-            <ResponsiveContainer width={260} height={200}>
-              <BarChart data={chartData}>
-                <XAxis dataKey="name" fontSize={12} />
-                <YAxis fontSize={12} />
-                <Tooltip content={<CustomTooltip />} />
-                <Bar dataKey="value">
-                  {chartData.map((_, index) => (
-                    <Cell key={`cell-${String(index)}`} fill={barColors[index % barColors.length]} radius={[8, 8, 0, 0]} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-      )}
+      <PartialResultsModal show={!!(partialResults && showModal)} onClose={() => { setShowModal(false); }} rinher={rinher} />
     </>
   );
 }
