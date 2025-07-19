@@ -3,7 +3,7 @@ import type {RinhersPartialResultsData} from "../types/rinhers-partial-results-d
 
 
 async function fetchPartialResults() {
-    const res = await fetch('https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/refs/heads/main/PREVIA_RESULTADOS.md');
+    const res = await fetch('https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/PREVIA_RESULTADOS.md');
     if (!res.ok) throw new Error(`Failed to fetch PREVIA_RESULTADOS.md: ${res.statusText}`);
     const md = await res.text();
 
