@@ -32,3 +32,11 @@ jobs:
       
     - name: Run script
       run: bun run script/index.ts
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add rinhers.json
+        git diff --staged --quiet || git commit -m "chore: update `rinhers.json` - $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
