@@ -14,10 +14,10 @@ Conheça os participantes e suas soluções da [Rinha de Back end 2025](https://
 
 ## Funcionalidades
 
-- Ver os participantes em uma interface intuitiva, descontraída e responsiva
-- Pesquisar e filtrar resultados por nome, linguagem de programação ou tecnologias usadas
+- Conhecer os Rinhers em uma interface intuitiva, descontraída e responsiva
+- Pesquisar e filtrar participantes por nome, linguagem de programação ou tecnologias usadas
 - Trocar entre o tema claro e escuro
-- Gerar `rinhers.json` semi-automaticamente
+- Receber atualização automática dos participantes todo dia às 21h (horário de Brasília).
 
 ## Como rodar localmente
 
@@ -46,7 +46,7 @@ bun gen
 ```
 
 > [!WARNING]
-> Para executar o script é necessário preencher a variável de ambiente `GITHUB_AUTH_TOKEN` com [um token de acesso pessoal](https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#como-criar-um-personal-access-token-classic) que tenha a permissão `public_repo`.
+> Para executar o script é necessário preencher a variável de ambiente `GITHUB_AUTH_TOKEN` com [um token de acesso pessoal (clássico)](https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#como-criar-um-personal-access-token-classic) que tenha a permissão `public_repo`.
 
 ```sh
 echo "GITHUB_AUTH_TOKEN=" > .env
@@ -66,7 +66,7 @@ As URLs são separadas em chunks, depois os arquivos json são consultados usand
 
 No final o resultado é convertido no arquivo `rinhers.json`.
 
-Novas versões do arquivo vão ser geradas automaticamente quando um usuário abrir uma issue neste repositório com a tag `update-rinhers`, a qual vai disparar o pipeline do GitHub Actions.
+Novas versões do arquivo são geradas automaticamente todo dia por causa de um [pipeline agendado do GitHub Action](.github/workflows/main.yml).
 
 ###### Melhorias
 
@@ -82,6 +82,7 @@ Novas versões do arquivo vão ser geradas automaticamente quando um usuário ab
 - [TailwindCSS](https://tailwindcss.com/)
 - [Lucide](https://lucide.dev/icons/)
 - [Cloudflare Pages](https://pages.cloudflare.com/)
+- [GitHub Actions](https://docs.github.com/pt/actions)
 
 O ícone do projeto foi feito usando [ray.so](https://ray.so/icon).
 
