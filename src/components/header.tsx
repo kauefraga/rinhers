@@ -1,5 +1,3 @@
-import { RotateCcwIcon } from 'lucide-react';
-import { Button } from './button';
 import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
@@ -11,9 +9,10 @@ export function Header() {
       </div>
 
       <div className="flex gap-6">
+        {/* open dialog modal telling user that rinhers.json is updated automatically once every day because of a github action triggered 21h -3 gmt brasilia
         <Button icon={<RotateCcwIcon />}>
           Atualizar
-        </Button>
+        </Button> */}
 
         <ThemeToggle />
       </div>
