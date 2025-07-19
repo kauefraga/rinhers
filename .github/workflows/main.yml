@@ -32,6 +32,8 @@ jobs:
       
     - name: Run script
       run: bun run script/index.ts
+      env:
+        GITHUB_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
     - name: Commit and push changes
       run: |
