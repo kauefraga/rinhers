@@ -77,7 +77,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
           <a href={sourceCodeRepo} target="_blank"><code>Source code</code></a>
 
           <div className="flex gap-4">
-            {social.map(s => <a key={s} href={s}><SmartIcon src={s} /></a>)}
+            {social?.map(s => <a key={s} href={s}><SmartIcon src={s} /></a>)}
           </div>
         </div>
       </li>
