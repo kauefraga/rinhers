@@ -7,6 +7,7 @@ import { RinherCard } from './components/rinher-card';
 import { SearchInput } from './components/search-input';
 
 import r from '../rinhers.json';
+import type { Rinher } from './types/rinher';
 
 const { summary, data: rinhers } = r;
 /** Rinhers.json was generated in this date */
@@ -19,7 +20,7 @@ export function App() {
     r.name.toLowerCase().includes(search.toLowerCase())
     || r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
     || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
-  );
+  ) as Rinher[];
   const hasResults = filteredRinhers.length > 0;
 
   return (
