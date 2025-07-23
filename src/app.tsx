@@ -98,8 +98,8 @@ export function App() {
 
         <ul className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4">
           {
-            filteredRinhers.map(rinher => (
-              <RinherCard key={rinher['source-code-repo']} rinher={rinher} />
+            filteredRinhers.map((rinher, idx) => (
+              <RinherCard key={`${rinher['source-code-repo']}#${String(idx)}`} rinher={rinher} />
             ))
           }
         </ul>
