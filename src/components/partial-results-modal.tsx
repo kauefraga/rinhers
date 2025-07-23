@@ -14,7 +14,7 @@ export function PartialResultsModal({ show, onClose, rinher }: PartialResultsMod
   const { name, langs, partialResults } = rinher;
   const chartData = partialResults
     ? [
-        { name: 'p99', value: Number(partialResults.p99.replace('ms', '')) || 0 },
+        { name: 'p99', value: Number(partialResults.p99?.replace('ms', '')) || 0 },
         { name: 'Bônus (%)', value: Number(partialResults.bonus) || 0 },
         { name: 'Multa ($)', value: Number(partialResults.multa) || 0 },
         { name: 'Lucro', value: Number(partialResults.lucro) || 0 },
