@@ -5,6 +5,7 @@ import { Header } from './components/header';
 import { Link } from './components/link';
 import { RinherCard } from './components/rinher-card';
 import { SearchInput } from './components/search-input';
+import { SortInput } from './components/sort-input';
 
 import r from '../rinhers.json';
 import type { Rinher } from './types/rinher';
@@ -15,12 +16,33 @@ const generatedAt = new Date(summary.generated_at).toLocaleDateString('pt-br');
 
 export function App() {
   const [search, setSearch] = useState('');
+  const [sort, setSort] = useState('');
 
-  const filteredRinhers = rinhers.filter(r =>
-    r.name.toLowerCase().includes(search.toLowerCase())
-    || r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
-    || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
-  ) as Rinher[];
+  const filteredRinhers = (search
+    ? rinhers.filter(r =>
+        r.name.toLowerCase().includes(search.toLowerCase())
+        || r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
+        || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
+      )
+    : rinhers) as Rinher[];
+  if (sort) {
+    filteredRinhers.sort((a, b) => {
+      if (sort === 'p99') {
+        // Lower is better
+        return (Number(a.partialResults?.p99?.replace('ms', '')) || 99999) - (Number(b.partialResults?.p99?.replace('ms', '')) || 99999);
+      }
+      if (sort === 'bonus') {
+        return (Number(b.partialResults?.bonus) || 0) - (Number(a.partialResults?.bonus) || 0);
+      }
+      if (sort === 'multa') {
+        return (Number(b.partialResults?.multa) || 0) - (Number(a.partialResults?.multa) || 0);
+      }
+      if (sort === 'lucro') {
+        return (Number(b.partialResults?.lucro) || 0) - (Number(a.partialResults?.lucro) || 0);
+      }
+      return 0;
+    });
+  }
   const hasResults = filteredRinhers.length > 0;
 
   return (
@@ -54,6 +76,10 @@ export function App() {
             onChange={(e) => { setSearch(e.target.value); }}
             value={search}
             hasResults={hasResults}
+          />
+          <SortInput
+            onChange={(e) => { setSort(e.target.value); }}
+            value={sort}
           />
 
           <div className="text-center md:text-right">
