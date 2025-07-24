@@ -1,6 +1,6 @@
 export type Rinher = {
   'name': string;
-  'social': string[];
+  'social'?: string[];
   'source-code-repo': string;
   'langs'?: string[];
   'storages'?: string[];
