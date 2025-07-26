@@ -1,9 +1,9 @@
 {
   "summary": {
-    "total_files": 105,
-    "successful_downloads": 100,
-    "failed_downloads": 5,
-    "generated_at": "2025-07-25T01:16:28.077Z"
+    "total_files": 110,
+    "successful_downloads": 107,
+    "failed_downloads": 3,
+    "generated_at": "2025-07-26T01:14:49.245Z"
   },
   "data": [
     {
@@ -35,7 +35,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/Maxel-Uds-quarkus/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.501Z"
+        "downloaded_at": "2025-07-26T01:14:47.615Z"
       }
     },
     {
@@ -68,7 +68,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/adriano-moreira/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.533Z"
+        "downloaded_at": "2025-07-26T01:14:47.648Z"
       }
     },
     {
@@ -90,11 +90,14 @@
         "nginx"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)"
+        "p99": "4.079590199999993ms",
+        "bonus": "0.13840819600000015",
+        "multa": "0",
+        "lucro": "351997.2087532401"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/adrianosilva-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.502Z"
+        "downloaded_at": "2025-07-26T01:14:47.625Z"
       }
     },
     {
@@ -110,18 +113,18 @@
       "storages": [],
       "messaging": [],
       "load-balancers": [
-        "traefik"
+        "nginx"
       ],
       "other-technologies": [],
       "partialResults": {
-        "p99": "4.342190649999971ms",
-        "bonus": "0.1331561870000006",
+        "p99": "4.788265849999994ms",
+        "bonus": "0.12423468300000012",
         "multa": "0",
-        "lucro": "358780.977094756"
+        "lucro": "355913.7347986978"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/alan-silva/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.537Z"
+        "downloaded_at": "2025-07-26T01:14:47.624Z"
       }
     },
     {
@@ -149,7 +152,36 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/alexroza-rs/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.518Z"
+        "downloaded_at": "2025-07-26T01:14:47.621Z"
+      }
+    },
+    {
+      "name": "Anderson Gomes",
+      "social": [
+        "https://www.linkedin.com/in/devanderson/"
+      ],
+      "source-code-repo": "https://github.com/andersongomes001/rinha-2025-go.git",
+      "langs": [
+        "go"
+      ],
+      "storages": [
+        "redis"
+      ],
+      "messaging": [
+        "redis"
+      ],
+      "load-balancers": [
+        "nginx"
+      ],
+      "partialResults": {
+        "p99": "3.8664645899999996ms",
+        "bonus": "0.14267070820000002",
+        "multa": "0",
+        "lucro": "359204.62184419116"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/andersongomes001-go/info.json",
+        "downloaded_at": "2025-07-26T01:14:47.648Z"
       }
     },
     {
@@ -178,7 +210,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/andersongomes001/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.522Z"
+        "downloaded_at": "2025-07-26T01:14:47.624Z"
       }
     },
     {
@@ -207,7 +239,36 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/andre-nicoletti/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.508Z"
+        "downloaded_at": "2025-07-26T01:14:47.603Z"
+      }
+    },
+    {
+      "name": "Aníbal Marques Ferreira",
+      "social": [
+        "https://www.linkedin.com/in/anibalmf1/"
+      ],
+      "source-code-repo": "https://github.com/anibalmf1/anibal-rinha-2025-2",
+      "langs": [
+        "rust"
+      ],
+      "storages": [
+        "postgresql"
+      ],
+      "messaging": [
+        "redis"
+      ],
+      "load-balancers": [
+        ""
+      ],
+      "partialResults": {
+        "p99": "11.582944650000055ms",
+        "bonus": "0",
+        "multa": "0",
+        "lucro": "311491.71499999997"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/anibalferreira-rust-2/info.json",
+        "downloaded_at": "2025-07-26T01:14:47.619Z"
       }
     },
     {
@@ -236,7 +297,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/anibalferreira-rust/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.521Z"
+        "downloaded_at": "2025-07-26T01:14:47.615Z"
       }
     },
     {
@@ -263,7 +324,34 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/antooniodev-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.565Z"
+        "downloaded_at": "2025-07-26T01:14:47.753Z"
+      }
+    },
+    {
+      "name": "Arthur Isvi",
+      "social": [
+        "https://www.linkedin.com/in/arthurisvi/",
+        "https://x.com/arthurisvi"
+      ],
+      "source-code-repo": "https://github.com/arthurisvi/rinha-backend-2025",
+      "langs": [
+        "php"
+      ],
+      "storages": [
+        "redis"
+      ],
+      "load-balancers": [
+        "nginx"
+      ],
+      "partialResults": {
+        "p99": "7.030852100000024ms",
+        "bonus": "0.07938295799999953",
+        "multa": "106326.64525",
+        "lucro": "221579.55150474748"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/arthurisvi-php-swoole/info.json",
+        "downloaded_at": "2025-07-26T01:14:47.750Z"
       }
     },
     {
@@ -290,7 +378,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/artschur/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.537Z"
+        "downloaded_at": "2025-07-26T01:14:47.782Z"
       }
     },
     {
@@ -324,7 +412,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/asfernandes-haproxy-mongoose-lmdb/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.753Z"
+        "downloaded_at": "2025-07-26T01:14:47.755Z"
       }
     },
     {
@@ -354,7 +442,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/bine-rinha-backend-golang/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.815Z"
+        "downloaded_at": "2025-07-26T01:14:47.755Z"
       }
     },
     {
@@ -384,7 +472,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/bine-rinha-backend-react-php/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.740Z"
+        "downloaded_at": "2025-07-26T01:14:47.772Z"
       }
     },
     {
@@ -411,7 +499,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/boaglio-player456/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.790Z"
+        "downloaded_at": "2025-07-26T01:14:47.755Z"
       }
     },
     {
@@ -438,7 +526,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ccs1201-01/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.797Z"
+        "downloaded_at": "2025-07-26T01:14:47.781Z"
       }
     },
     {
@@ -468,7 +556,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ccs1201-02-sprg-redis-native/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.818Z"
+        "downloaded_at": "2025-07-26T01:14:47.770Z"
       }
     },
     {
@@ -476,7 +564,7 @@
       "social": [
         "https://github.com/cicerogb"
       ],
-      "source-code-repo": "https://github.com/cicerogb/cgb-go-v1",
+      "source-code-repo": "https://github.com/CiceroGB/cgb-go-v1-source",
       "langs": [
         "go"
       ],
@@ -490,11 +578,14 @@
         "docker"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v1)"
+        "p99": "25.928633520000123ms",
+        "bonus": "0",
+        "multa": "0",
+        "lucro": "309087.795"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/cgb-go-v1/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.771Z"
+        "downloaded_at": "2025-07-26T01:14:47.770Z"
       }
     },
     {
@@ -523,7 +614,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/d4vz/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.767Z"
+        "downloaded_at": "2025-07-26T01:14:47.908Z"
       }
     },
     {
@@ -550,7 +641,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/danielsuhett-nestjs/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.788Z"
+        "downloaded_at": "2025-07-26T01:14:47.915Z"
       }
     },
     {
@@ -573,7 +664,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/danilosantana-dotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.800Z"
+        "downloaded_at": "2025-07-26T01:14:47.894Z"
       }
     },
     {
@@ -600,7 +691,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/davidalecrim1-go-1/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.063Z"
+        "downloaded_at": "2025-07-26T01:14:47.903Z"
       }
     },
     {
@@ -628,7 +719,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/davidalecrim1-go-2/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.031Z"
+        "downloaded_at": "2025-07-26T01:14:47.900Z"
       }
     },
     {
@@ -657,7 +748,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/davigga-node-2/info.json",
-        "downloaded_at": "2025-07-25T01:16:25.998Z"
+        "downloaded_at": "2025-07-26T01:14:47.893Z"
       }
     },
     {
@@ -687,7 +778,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/davigga-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.031Z"
+        "downloaded_at": "2025-07-26T01:14:47.910Z"
       }
     },
     {
@@ -716,7 +807,34 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/diegodario-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.028Z"
+        "downloaded_at": "2025-07-26T01:14:47.927Z"
+      }
+    },
+    {
+      "name": "Tiago Dolphine",
+      "social": [
+        "https://www.linkedin.com/in/tiagodolphine/",
+        "https://x.com/tiagodolphine"
+      ],
+      "source-code-repo": "https://github.com/tiagodolphine/rinha-de-backend-2025/tree/main/backend",
+      "langs": [
+        "java"
+      ],
+      "storages": [
+        "postgresql"
+      ],
+      "load-balancers": [
+        "nginx"
+      ],
+      "partialResults": {
+        "p99": "121.47635015000006ms",
+        "bonus": "0",
+        "multa": "107383.93224999204",
+        "lucro": "199427.30274998525"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/dolphs/info.json",
+        "downloaded_at": "2025-07-26T01:14:47.920Z"
       }
     },
     {
@@ -739,14 +857,13 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/dotnetRinha/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.044Z"
+        "downloaded_at": "2025-07-26T01:14:47.916Z"
       }
     },
     {
-      "name": "Eber Camargo",
+      "name": "eber404",
       "social": [
-        "https://x.com/everwithb",
-        "https://www.linkedin.com/in/eberc/"
+        "https://x.com/everwithb"
       ],
       "source-code-repo": "https://github.com/eber404/dudebank",
       "langs": [
@@ -754,7 +871,7 @@
         "typescript"
       ],
       "storages": [
-        "bun:sqlite"
+        "sqlite"
       ],
       "messaging": [],
       "load-balancers": [
@@ -762,14 +879,14 @@
       ],
       "other-technologies": [],
       "partialResults": {
-        "p99": "4.009345220000003ms",
-        "bonus": "0.13981309559999994",
-        "multa": "109154.43525",
-        "lucro": "246318.86400934932"
+        "p99": "23.3003006200002ms",
+        "bonus": "0",
+        "multa": "109108.46624999998",
+        "lucro": "202630.00874999998"
       },
       "_metadata": {
-        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/dudebank/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.011Z"
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/dudebank-bun/info.json",
+        "downloaded_at": "2025-07-26T01:14:48.063Z"
       }
     },
     {
@@ -793,7 +910,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/el_yawd-crab/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.031Z"
+        "downloaded_at": "2025-07-26T01:14:48.049Z"
       }
     },
     {
@@ -823,11 +940,49 @@
         "bash"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)"
+        "p99": "13.575562099999978ms",
+        "bonus": "0",
+        "multa": "0",
+        "lucro": "229749.48"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/emiliosheinz-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.040Z"
+        "downloaded_at": "2025-07-26T01:14:48.065Z"
+      }
+    },
+    {
+      "name": "Felipe Melo",
+      "social": [
+        "https://github.com/felipefrmelo"
+      ],
+      "source-code-repo": "https://github.com/felipefrmelo/rinha-de-backend-imp-2025",
+      "langs": [
+        "rust"
+      ],
+      "storages": [
+        "postgresql",
+        "redis"
+      ],
+      "messaging": [
+        "redis"
+      ],
+      "load-balancers": [
+        "nginx"
+      ],
+      "other-technologies": [
+        "axum",
+        "sqlx",
+        "tokio"
+      ],
+      "partialResults": {
+        "p99": "5.082088719999976ms",
+        "bonus": "0.11835822560000049",
+        "multa": "105890.9845",
+        "lucro": "232463.45416416333"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/felipefrmelo-rust/info.json",
+        "downloaded_at": "2025-07-26T01:14:48.056Z"
       }
     },
     {
@@ -856,7 +1011,27 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/felipemcassiano/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.078Z"
+        "downloaded_at": "2025-07-26T01:14:48.081Z"
+      }
+    },
+    {
+      "name": "Felipe Schirmann",
+      "site": [
+        "https://felipeschirmann.dev.br/"
+      ],
+      "source-code-repo": "https://github.com/felipeschirmann/java-is-live",
+      "langs": [
+        "java"
+      ],
+      "partialResults": {
+        "p99": "2.9465247400000045ms",
+        "bonus": "0.1610695051999999",
+        "multa": "0",
+        "lucro": "0"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/felipeschirmann/info.json",
+        "downloaded_at": "2025-07-26T01:14:48.055Z"
       }
     },
     {
@@ -884,7 +1059,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/fhgm-dani-ed/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.303Z"
+        "downloaded_at": "2025-07-26T01:14:48.070Z"
       }
     },
     {
@@ -910,14 +1085,14 @@
         "docker"
       ],
       "partialResults": {
-        "p99": "11.692093560000075ms",
-        "bonus": "0",
+        "p99": "4.386896959999988ms",
+        "bonus": "0.13226206080000025",
         "multa": "0",
-        "lucro": "309105.70499999996"
+        "lucro": "353219.7535007595"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/francoggm-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.260Z"
+        "downloaded_at": "2025-07-26T01:14:48.092Z"
       }
     },
     {
@@ -944,14 +1119,14 @@
         ""
       ],
       "partialResults": {
-        "p99": "12.207085400000004ms",
-        "bonus": "0",
+        "p99": "9.377176910000008ms",
+        "bonus": "0.032456461799999836",
         "multa": "0",
-        "lucro": "315926.43000000005"
+        "lucro": "326105.29163180245"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/gabxdev-java-1/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.265Z"
+        "downloaded_at": "2025-07-26T01:14:48.024Z"
       }
     },
     {
@@ -985,7 +1160,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/gabxdev-java-2/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.272Z"
+        "downloaded_at": "2025-07-26T01:14:48.046Z"
       }
     },
     {
@@ -1011,7 +1186,7 @@
       ],
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/geazi-anc/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.279Z"
+        "downloaded_at": "2025-07-26T01:14:48.233Z"
       }
     },
     {
@@ -1031,14 +1206,14 @@
         "nginx"
       ],
       "partialResults": {
-        "p99": "3.384686399999996ms",
-        "bonus": "0.15230627200000008",
-        "multa": "0",
-        "lucro": "364778.9419583192"
+        "p99": "3.5941612699999808ms",
+        "bonus": "0.1481167746000004",
+        "multa": "110823.94575000968",
+        "lucro": "252715.57180126617"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/gtiburcio-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.286Z"
+        "downloaded_at": "2025-07-26T01:14:48.203Z"
       }
     },
     {
@@ -1066,11 +1241,14 @@
         "fastify"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guidugaich-node)"
+        "p99": "118.87273569999962ms",
+        "bonus": "0",
+        "multa": "27583.4895",
+        "lucro": "51226.480500000005"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/guidugaich-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.289Z"
+        "downloaded_at": "2025-07-26T01:14:48.197Z"
       }
     },
     {
@@ -1103,7 +1281,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/guilhermegules-payflow-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.285Z"
+        "downloaded_at": "2025-07-26T01:14:48.333Z"
       }
     },
     {
@@ -1133,7 +1311,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/hamilton-golang-mongo/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.521Z"
+        "downloaded_at": "2025-07-26T01:14:48.230Z"
       }
     },
     {
@@ -1159,7 +1337,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/henriqueramos13-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.540Z"
+        "downloaded_at": "2025-07-26T01:14:48.196Z"
       }
     },
     {
@@ -1196,7 +1374,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/henriquevalcanaia-swift-vapor/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.531Z"
+        "downloaded_at": "2025-07-26T01:14:48.230Z"
       }
     },
     {
@@ -1229,7 +1407,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/jairoandre-go-v2/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.500Z"
+        "downloaded_at": "2025-07-26T01:14:48.204Z"
       }
     },
     {
@@ -1262,7 +1440,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/jairoandre/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.520Z"
+        "downloaded_at": "2025-07-26T01:14:48.212Z"
       }
     },
     {
@@ -1292,7 +1470,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/jccl/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.495Z"
+        "downloaded_at": "2025-07-26T01:14:48.436Z"
       }
     },
     {
@@ -1313,7 +1491,7 @@
       ],
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/joao-bittencourt-php/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.511Z"
+        "downloaded_at": "2025-07-26T01:14:48.477Z"
       }
     },
     {
@@ -1345,7 +1523,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/joaocrulhas-nestjs-ts/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.527Z"
+        "downloaded_at": "2025-07-26T01:14:48.474Z"
       }
     },
     {
@@ -1375,7 +1553,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/joaoreisa-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.495Z"
+        "downloaded_at": "2025-07-26T01:14:48.426Z"
       }
     },
     {
@@ -1388,7 +1566,7 @@
         "go"
       ],
       "storages": [
-        "redis"
+        "postgresql"
       ],
       "load-balancers": [
         "nginx"
@@ -1398,14 +1576,14 @@
         "sonic"
       ],
       "partialResults": {
-        "p99": "2.8006495199999994ms",
-        "bonus": "0.16398700959999998",
-        "multa": "0",
-        "lucro": "0"
+        "p99": "3.157595919999999ms",
+        "bonus": "0.15684808160000002",
+        "multa": "26574.261000000002",
+        "lucro": "61261.118593679144"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/joelgarciajr84-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.488Z"
+        "downloaded_at": "2025-07-26T01:14:48.438Z"
       }
     },
     {
@@ -1432,7 +1610,7 @@
       ],
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/josafaverissimo-java-01/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.767Z"
+        "downloaded_at": "2025-07-26T01:14:48.468Z"
       }
     },
     {
@@ -1458,7 +1636,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/josineyjr-go-1/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.724Z"
+        "downloaded_at": "2025-07-26T01:14:48.442Z"
       }
     },
     {
@@ -1491,7 +1669,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/kauan-carvalho-elixir/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.803Z"
+        "downloaded_at": "2025-07-26T01:14:48.458Z"
       }
     },
     {
@@ -1521,7 +1699,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/kauan-carvalho-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.778Z"
+        "downloaded_at": "2025-07-26T01:14:48.472Z"
       }
     },
     {
@@ -1548,7 +1726,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/leonardotomas-cs/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.788Z"
+        "downloaded_at": "2025-07-26T01:14:48.471Z"
       }
     },
     {
@@ -1580,7 +1758,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/leoralph/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.747Z"
+        "downloaded_at": "2025-07-26T01:14:48.578Z"
       }
     },
     {
@@ -1611,7 +1789,33 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/lhuizf-bun/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.768Z"
+        "downloaded_at": "2025-07-26T01:14:48.609Z"
+      }
+    },
+    {
+      "name": "Felipe Libardi Gonçalves",
+      "social": [
+        "https://www.linkedin.com/in/libardi/"
+      ],
+      "source-code-repo": "https://github.com/LibardiFelipe/AgoraVai",
+      "langs": [
+        "c#",
+        "dotnet"
+      ],
+      "storages": [
+        "postgresql"
+      ],
+      "messaging": [],
+      "load-balancers": [
+        "nginx"
+      ],
+      "other-technologies": [],
+      "partialResults": {
+        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-2)"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/libardi-dotnet-2/info.json",
+        "downloaded_at": "2025-07-26T01:14:48.585Z"
       }
     },
     {
@@ -1642,7 +1846,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/libardi-dotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.766Z"
+        "downloaded_at": "2025-07-26T01:14:48.573Z"
       }
     },
     {
@@ -1671,7 +1875,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/lpicanco-rust/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.760Z"
+        "downloaded_at": "2025-07-26T01:14:48.576Z"
       }
     },
     {
@@ -1701,11 +1905,14 @@
         "postgres.js"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luanvictor-node)"
+        "p99": "905.0627590200002ms",
+        "bonus": "0",
+        "multa": "68439.483",
+        "lucro": "127101.89700000001"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/luanvictor-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.762Z"
+        "downloaded_at": "2025-07-26T01:14:48.612Z"
       }
     },
     {
@@ -1739,7 +1946,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/lucas-laurentino-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.986Z"
+        "downloaded_at": "2025-07-26T01:14:48.589Z"
       }
     },
     {
@@ -1769,7 +1976,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/lucasgoveia/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.993Z"
+        "downloaded_at": "2025-07-26T01:14:48.594Z"
       }
     },
     {
@@ -1804,7 +2011,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/lucasvsouza28-bun/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.029Z"
+        "downloaded_at": "2025-07-26T01:14:48.580Z"
       }
     },
     {
@@ -1831,7 +2038,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/luizcordista-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.988Z"
+        "downloaded_at": "2025-07-26T01:14:48.595Z"
       }
     },
     {
@@ -1853,11 +2060,14 @@
         "nginx"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal)"
+        "p99": "8.643978680000025ms",
+        "bonus": "0.047120426399999506",
+        "multa": "0",
+        "lucro": "311414.16454958374"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/luucaspole-crystal/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.002Z"
+        "downloaded_at": "2025-07-26T01:14:48.707Z"
       }
     },
     {
@@ -1887,7 +2097,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/marcospaulo-java-1/info.json",
-        "downloaded_at": "2025-07-25T01:16:26.977Z"
+        "downloaded_at": "2025-07-26T01:14:48.734Z"
       }
     },
     {
@@ -1911,42 +2121,14 @@
         "graalvm"
       ],
       "partialResults": {
-        "p99": "[logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava-redis)"
-      },
-      "_metadata": {
-        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/matheusdojava-redis/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.013Z"
-      }
-    },
-    {
-      "name": "Matheus Pieropan",
-      "social": [
-        "https://www.linkedin.com/in/matheuspieropan/",
-        "https://www.youtube.com/@MatheusdoJava"
-      ],
-      "source-code-repo": "https://github.com/matheuspieropan/rinhabackend2025",
-      "langs": [
-        "java"
-      ],
-      "storages": [
-        "mongodb"
-      ],
-      "messaging": [],
-      "load-balancers": [
-        "nginx"
-      ],
-      "other-technologies": [
-        "graalvm"
-      ],
-      "partialResults": {
-        "p99": "24.022017299999458ms",
-        "bonus": "0",
-        "multa": "110139.98275000001",
-        "lucro": "204545.68225"
+        "p99": "4.904135220000001ms",
+        "bonus": "0.12191729559999999",
+        "multa": "0",
+        "lucro": "355074.0398098167"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/matheusdojava/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.016Z"
+        "downloaded_at": "2025-07-26T01:14:48.731Z"
       }
     },
     {
@@ -1966,7 +2148,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/matheusf-lucas-and-luis-java1/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.015Z"
+        "downloaded_at": "2025-07-26T01:14:48.725Z"
       }
     },
     {
@@ -1990,14 +2172,14 @@
         "docker-compose"
       ],
       "partialResults": {
-        "p99": "22.875504660000228ms",
+        "p99": "39.256014100000044ms",
         "bonus": "0",
-        "multa": "79775.71699999999",
-        "lucro": "148154.903"
+        "multa": "78995.28874999999",
+        "lucro": "146705.53625"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/maxsonferovante/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.009Z"
+        "downloaded_at": "2025-07-26T01:14:48.728Z"
       }
     },
     {
@@ -2021,7 +2203,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/mbenencase-python/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.231Z"
+        "downloaded_at": "2025-07-26T01:14:48.729Z"
       }
     },
     {
@@ -2056,7 +2238,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/mxlange-fasthttp/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.277Z"
+        "downloaded_at": "2025-07-26T01:14:48.748Z"
       }
     },
     {
@@ -2090,7 +2272,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/mxlange/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.374Z"
+        "downloaded_at": "2025-07-26T01:14:48.727Z"
       }
     },
     {
@@ -2116,7 +2298,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/niltonkummer/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.238Z"
+        "downloaded_at": "2025-07-26T01:14:48.768Z"
       }
     },
     {
@@ -2143,7 +2325,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/not4rt-rustcoroutines/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.215Z"
+        "downloaded_at": "2025-07-26T01:14:48.727Z"
       }
     },
     {
@@ -2173,7 +2355,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/oliveigah/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.351Z"
+        "downloaded_at": "2025-07-26T01:14:48.888Z"
       }
     },
     {
@@ -2201,7 +2383,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/panissetrafael-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.219Z"
+        "downloaded_at": "2025-07-26T01:14:48.869Z"
       }
     },
     {
@@ -2233,7 +2415,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/pedropereiradev-bun/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.229Z"
+        "downloaded_at": "2025-07-26T01:14:48.880Z"
       }
     },
     {
@@ -2253,14 +2435,14 @@
         "nginx"
       ],
       "partialResults": {
-        "p99": "4.9429496399999975ms",
-        "bonus": "0.12114100720000005",
+        "p99": "9.312193099999973ms",
+        "bonus": "0.03375613800000053",
         "multa": "0",
-        "lucro": "353141.664000151"
+        "lucro": "325419.32516895136"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/rafaspimenta-dotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.272Z"
+        "downloaded_at": "2025-07-26T01:14:48.886Z"
       }
     },
     {
@@ -2280,14 +2462,14 @@
         "nginx"
       ],
       "partialResults": {
-        "p99": "24.875338269999894ms",
+        "p99": "11.285628479999996ms",
         "bonus": "0",
-        "multa": "93215.72924998996",
-        "lucro": "173114.92574998137"
+        "multa": "108900.909249988",
+        "lucro": "202244.54574997773"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ricardo-santos/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.236Z"
+        "downloaded_at": "2025-07-26T01:14:48.867Z"
       }
     },
     {
@@ -2321,7 +2503,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ricardovhz/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.568Z"
+        "downloaded_at": "2025-07-26T01:14:48.921Z"
       }
     },
     {
@@ -2354,7 +2536,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ricassiocosta-python/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.588Z"
+        "downloaded_at": "2025-07-26T01:14:48.921Z"
       }
     },
     {
@@ -2386,7 +2568,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/robertAlmeida/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.575Z"
+        "downloaded_at": "2025-07-26T01:14:48.880Z"
       }
     },
     {
@@ -2412,7 +2594,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/rodrigo-schonardt-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.576Z"
+        "downloaded_at": "2025-07-26T01:14:48.877Z"
       }
     },
     {
@@ -2440,7 +2622,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/rodrigocaldeira-elixir/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.599Z"
+        "downloaded_at": "2025-07-26T01:14:48.904Z"
       }
     },
     {
@@ -2467,7 +2649,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/rodrixl/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.587Z"
+        "downloaded_at": "2025-07-26T01:14:49.022Z"
       }
     },
     {
@@ -2497,7 +2679,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/ryangst-bun/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.572Z"
+        "downloaded_at": "2025-07-26T01:14:49.035Z"
       }
     },
     {
@@ -2525,7 +2707,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/samypng-go/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.575Z"
+        "downloaded_at": "2025-07-26T01:14:49.045Z"
       }
     },
     {
@@ -2549,14 +2731,14 @@
         "Spring Boot 3.5.3"
       ],
       "partialResults": {
-        "p99": "10.564208840000003ms",
-        "bonus": "0.008715823199999946",
-        "multa": "0",
-        "lucro": "318732.1798647795"
+        "p99": "10.457644560000066ms",
+        "bonus": "0.01084710879999868",
+        "multa": "110625.44324999998",
+        "lucro": "208875.72666137377"
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/santannaf/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.567Z"
+        "downloaded_at": "2025-07-26T01:14:49.025Z"
       }
     },
     {
@@ -2588,7 +2770,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/silvaangelo/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.549Z"
+        "downloaded_at": "2025-07-26T01:14:49.040Z"
       }
     },
     {
@@ -2615,7 +2797,33 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/suricat89-solucao1/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.836Z"
+        "downloaded_at": "2025-07-26T01:14:49.051Z"
+      }
+    },
+    {
+      "name": "Paulo Ricardo",
+      "social": [
+        "https://x.com/klp_paulo"
+      ],
+      "source-code-repo": "https://github.com/svaan1/rinha-de-backend-2025",
+      "langs": [
+        "go"
+      ],
+      "storages": [
+        "redis"
+      ],
+      "load-balancers": [
+        "nginx"
+      ],
+      "partialResults": {
+        "p99": "3.4275543599999936ms",
+        "bonus": "0.15144891280000014",
+        "multa": "0",
+        "lucro": "244717.44895187314"
+      },
+      "_metadata": {
+        "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/svaan1-go/info.json",
+        "downloaded_at": "2025-07-26T01:14:49.041Z"
       }
     },
     {
@@ -2641,7 +2849,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/vctrhugo-fastapi/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.770Z"
+        "downloaded_at": "2025-07-26T01:14:49.035Z"
       }
     },
     {
@@ -2675,7 +2883,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/wanderdotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.826Z"
+        "downloaded_at": "2025-07-26T01:14:49.211Z"
       }
     },
     {
@@ -2706,7 +2914,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/wiliansimoes-dotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.784Z"
+        "downloaded_at": "2025-07-26T01:14:49.180Z"
       }
     },
     {
@@ -2734,7 +2942,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/willianmarquess-lua-luvit/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.806Z"
+        "downloaded_at": "2025-07-26T01:14:49.211Z"
       }
     },
     {
@@ -2762,7 +2970,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/willianmarquess-node/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.789Z"
+        "downloaded_at": "2025-07-26T01:14:49.166Z"
       }
     },
     {
@@ -2791,7 +2999,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/willzada-BUNrinha/info.json",
-        "downloaded_at": "2025-07-25T01:16:27.802Z"
+        "downloaded_at": "2025-07-26T01:14:49.204Z"
       }
     },
     {
@@ -2825,7 +3033,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/willzada-aGOrinha/info.json",
-        "downloaded_at": "2025-07-25T01:16:28.034Z"
+        "downloaded_at": "2025-07-26T01:14:49.178Z"
       }
     },
     {
@@ -2854,7 +3062,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/wlagent/info.json",
-        "downloaded_at": "2025-07-25T01:16:28.021Z"
+        "downloaded_at": "2025-07-26T01:14:49.244Z"
       }
     },
     {
@@ -2883,7 +3091,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/xandao-php/info.json",
-        "downloaded_at": "2025-07-25T01:16:28.041Z"
+        "downloaded_at": "2025-07-26T01:14:49.172Z"
       }
     },
     {
@@ -2917,7 +3125,7 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/yanpitangui-dotnet/info.json",
-        "downloaded_at": "2025-07-25T01:16:28.027Z"
+        "downloaded_at": "2025-07-26T01:14:49.177Z"
       }
     },
     {
@@ -2946,25 +3154,15 @@
       },
       "_metadata": {
         "source_url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/zsantana-java-quarkus-v1/info.json",
-        "downloaded_at": "2025-07-25T01:16:28.076Z"
+        "downloaded_at": "2025-07-26T01:14:49.155Z"
       }
     }
   ],
   "errors": [
     {
       "success": false,
-      "error": "JSON Parse error: Property name must be a string literal",
-      "url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/felipeschirmann/info.json"
-    },
-    {
-      "success": false,
       "error": "HTTP 404: Not Found",
       "url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/gaoliveira21/info.json"
-    },
-    {
-      "success": false,
-      "error": "HTTP 404: Not Found",
-      "url": "https://raw.githubusercontent.com/zanfranceschi/rinha-de-backend-2025/main/participantes/svaan1-go/info.json"
     },
     {
       "success": false,
