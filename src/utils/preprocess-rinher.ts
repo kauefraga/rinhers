@@ -19,7 +19,9 @@ export function preprocessRinher(rinher: Rinher): PreprocessedRinher {
 
   // e.g. /kauefraga/esquilo-aniquilador
   //      ^0   ^1           ^2
-  const githubUser = new URL(rinher['source-code-repo']).pathname.split('/')[1];
+  const githubUser = rinher['source-code-repo'].includes('https://')
+    ? new URL(rinher['source-code-repo']).pathname.split('/')[1]
+    : '';
 
   const profileImage = `https://github.com/${githubUser}.png`;
 
