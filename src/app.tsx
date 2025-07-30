@@ -19,11 +19,16 @@ export function App() {
   const [sort, setSort] = useState('');
 
   const filteredRinhers = (search
-    ? rinhers.filter(r =>
-        r.name.toLowerCase().includes(search.toLowerCase())
-        || r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
-        || r['source-code-repo'].toLowerCase().includes(search.toLowerCase()),
-      )
+    ? rinhers.filter((r) => {
+        if (typeof r.name !== 'string') {
+          return r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
+            || r['source-code-repo'].toLowerCase().includes(search.toLowerCase());
+        }
+
+        return r.name.toLowerCase().includes(search.toLowerCase())
+          || r.langs.some(l => l.toLowerCase().includes(search.toLowerCase()))
+          || r['source-code-repo'].toLowerCase().includes(search.toLowerCase());
+      })
     : rinhers) as Rinher[];
   if (sort) {
     filteredRinhers.sort((a, b) => {
