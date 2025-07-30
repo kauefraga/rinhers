@@ -1,7 +1,7 @@
 import type { Rinher } from '../types/rinher';
 
 export interface PreprocessedRinher extends Rinher {
-  technologies: string[];
+  technologies: string;
   profileImage: string;
   submission: {
     name: string;
@@ -12,11 +12,15 @@ export interface PreprocessedRinher extends Rinher {
 function normalizeLangName(lang: string) {
   const l = lang.toLowerCase();
 
-  if (l === 'c#') {
+  if (l === 'c#' || l === 'csharp') {
     return 'cs';
   }
 
-  if (l === 'node') {
+  if (l === '.net') {
+    return 'dotnet';
+  }
+
+  if (l === 'node' || l === 'node.js') {
     return 'nodejs';
   }
 
@@ -30,7 +34,7 @@ export function preprocessRinher(rinher: Rinher): PreprocessedRinher {
     ...rinher['load-balancers'] ? rinher['load-balancers'].map(l => l.toLowerCase()) : [],
     ...rinher.messaging ? rinher.messaging.map(m => m.toLowerCase()) : [],
     ...rinher['other-technologies'] ? rinher['other-technologies'].map(o => o.toLowerCase()) : [],
-  ];
+  ].join(',').replace(',,', ',');
 
   // e.g. /kauefraga/esquilo-aniquilador
   //      ^0   ^1           ^2

@@ -21,6 +21,8 @@ export function RinherCard({ rinher }: RinherCardProps) {
     partialResults,
   } = preprocessRinher(rinher);
 
+  console.log(name, technologies);
+
   return (
     <>
       <li className="flex flex-col justify-center gap-6 border-2 border-black/50 rounded-xl px-6 py-4 transition-all hover:rounded-none dark:border-white/50">
@@ -67,7 +69,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
         </div>
 
         <img
-          src={`https://skillicons.dev/icons?i=${technologies.join(',')}`}
+          src={`https://skillicons.dev/icons?i=${technologies}`}
           alt="Ícones das tecnologias"
           loading="lazy"
           className="h-8 self-start"
