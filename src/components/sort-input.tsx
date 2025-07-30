@@ -4,9 +4,9 @@ import type { SelectHTMLAttributes } from 'react';
 export function SortInput({ ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <div
-      className="flex items-right border-2 rounded-xl px-1 py-2 transition-all"
+      className="flex items-right border-2 rounded-xl px-3 py-2 transition-all hover:rounded-none focus-within:rounded-none focus-within:border-blue-500"
     >
-      <ChartColumnIcon />
+      <ChartColumnIcon color="#7900FE" />
       <select {...props}>
         <option value="" disabled>Ordenar por</option>
         <option value="p99">P99</option>

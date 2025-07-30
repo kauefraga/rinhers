@@ -12,7 +12,7 @@ import type { Rinher } from './types/rinher';
 
 const { summary, data: rinhers } = r;
 /** Rinhers.json was generated in this date */
-const generatedAt = new Date(summary.generated_at).toLocaleDateString('pt-br');
+const generatedAt = new Date(summary.generated_at).toLocaleString('pt-br');
 
 export function App() {
   const [search, setSearch] = useState('');
@@ -88,11 +88,6 @@ export function App() {
               {' '}
               Rinhers no momento*
             </p>
-            <p>
-              Dados de
-              {' '}
-              {generatedAt}
-            </p>
           </div>
         </div>
 
@@ -123,7 +118,7 @@ export function App() {
         </Alert>
       </main>
 
-      <Footer />
+      <Footer generatedAt={generatedAt} />
     </>
   );
 }

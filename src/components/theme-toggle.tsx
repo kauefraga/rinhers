@@ -10,7 +10,6 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
     >
-      {theme === 'light' ? 'Modo escuro' : 'Modo claro'}
     </Button>
   );
 }

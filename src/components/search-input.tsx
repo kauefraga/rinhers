@@ -19,7 +19,7 @@ export function SearchInput({ hasResults = true, ...props }: SearchInputProps) {
         className="border-none outline-none flex-1 ml-2 placeholder-black/50 dark:placeholder-white/50"
         {...props}
       />
-      <SearchIcon />
+      <SearchIcon color="#7900FE" />
     </div>
   );
 }

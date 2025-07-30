@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function Button({ icon, children, ...props }: ButtonProps) {
