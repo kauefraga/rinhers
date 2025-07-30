@@ -9,12 +9,27 @@ export interface PreprocessedRinher extends Rinher {
   };
 }
 
+function normalizeLangName(lang: string) {
+  const l = lang.toLowerCase();
+
+  if (l === 'c#') {
+    return 'cs';
+  }
+
+  if (l === 'node') {
+    return 'nodejs';
+  }
+
+  return l;
+}
+
 export function preprocessRinher(rinher: Rinher): PreprocessedRinher {
   const technologies = [
-    ...rinher.langs ?? [],
-    ...rinher.storages ?? [],
-    ...rinher['load-balancers'] ?? [],
-    ...rinher.messaging ?? [],
+    ...rinher.langs ? rinher.langs.map(normalizeLangName) : [],
+    ...rinher.storages ? rinher.storages.map(s => s.toLowerCase()) : [],
+    ...rinher['load-balancers'] ? rinher['load-balancers'].map(l => l.toLowerCase()) : [],
+    ...rinher.messaging ? rinher.messaging.map(m => m.toLowerCase()) : [],
+    ...rinher['other-technologies'] ? rinher['other-technologies'].map(o => o.toLowerCase()) : [],
   ];
 
   // e.g. /kauefraga/esquilo-aniquilador
