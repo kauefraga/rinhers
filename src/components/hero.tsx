@@ -32,7 +32,7 @@ export function Hero({ count }: HeroProps) {
 
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-around px-6 py-4 rounded-xl border-2 border-black/50 dark:border-white/50 transition-all hover:rounded-none">
+      <div className="flex flex-col items-center gap-8 md:gap-0 md:flex-row md:justify-around px-6 py-4 rounded-xl border-2 border-black/50 dark:border-white/50 transition-all hover:rounded-none">
         <div className="flex flex-col items-center">
           <span className="text-[#7900FE] text-4xl font-bold">{count.rinhers}</span>
           <p>Rinhers participando</p>

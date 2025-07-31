@@ -12,7 +12,7 @@ export function SearchInput({ hasResults = true, ...props }: SearchInputProps) {
   return (
     <div
       data-has-results={hasResults}
-      className="flex items-center border-2 rounded-xl px-3 py-2 flex-1 transition-all hover:rounded-none focus-within:rounded-none focus-within:border-blue-500 data-[has-results=false]:border-red-500"
+      className="w-full flex items-center border-2 rounded-xl px-3 py-2 transition-all hover:rounded-none focus-within:rounded-none focus-within:border-blue-500 data-[has-results=false]:border-red-500"
     >
       <input
         type="text"
