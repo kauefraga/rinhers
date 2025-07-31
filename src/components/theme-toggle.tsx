@@ -8,7 +8,7 @@ export function ThemeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      icon={theme === 'light' ? <SunIcon fill="orange" /> : <MoonIcon fill="#E0E0E0" />}
+      icon={theme === 'light' ? <SunIcon fill="#ffe460" /> : <MoonIcon fill="#202020" />}
     >
     </Button>
   );
