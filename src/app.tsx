@@ -32,7 +32,7 @@ export function App() {
       if (includesSearch(rinher.name)) return true;
       if (includesSearch(rinher.technologies)) return true;
       if (includesSearch(rinher.submission?.name)) return true;
-      if (includesSearch((rinher as unknown)['source-code-repo'])) return true;
+      if (includesSearch((rinher as any)['source-code-repo'])) return true;
 
       const arrayKeys = [
         'langs',
