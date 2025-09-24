@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import type { Rinher } from '../types/rinher';
-import { preprocessRinher } from '../utils/preprocess-rinher';
+import { type PreprocessedRinher } from '../utils/preprocess-rinher';
 import { PartialResultsModal } from './partial-results-modal';
 import { SmartIcon } from './smart-icon';
 
 interface RinherCardProps {
-  rinher: Rinher;
+  rinher: PreprocessedRinher;
 }
 
 export function RinherCard({ rinher }: RinherCardProps) {
@@ -19,7 +18,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
     'source-code-repo': sourceCodeRepo,
     social,
     partialResults,
-  } = preprocessRinher(rinher);
+  } = rinher;
 
   return (
     <>
@@ -77,7 +76,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
           <a href={sourceCodeRepo} target="_blank"><code>Source code</code></a>
 
           <div className="flex gap-4">
-            {social?.map(s => <a key={s} href={s}><SmartIcon src={s} /></a>)}
+            {social?.map(s => <a key={Math.random() * s.length} href={s}><SmartIcon src={s} /></a>)}
           </div>
         </div>
       </li>

@@ -45,7 +45,7 @@ export function Hero({ count }: HeroProps) {
         </a>
 
         <div className="flex flex-col items-center">
-          <span className="text-[#7900FE] text-4xl font-bold">17/08</span>
+          <span className="text-[#7900FE] text-4xl font-bold">17/08/2025</span>
           <p>Data final de entrega</p>
         </div>
       </div>

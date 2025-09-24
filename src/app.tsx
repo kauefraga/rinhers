@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Alert } from './components/alert';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
+import { Hero } from './components/hero';
 import { RinherCard } from './components/rinher-card';
 import { SearchInput } from './components/search-input';
 import { SortInput } from './components/sort-input';
-import { Hero } from './components/hero';
 
 import r from '../rinhers.json';
 import type { Rinher } from './types/rinher';
+import { preprocessRinher } from './utils/preprocess-rinher';
 
-const { summary, data: rinhers } = r;
+const { summary, data } = r;
+const rinhers = data.map(d => preprocessRinher(d as Rinher));
 /** Rinhers.json was generated in this date */
 const generatedAt = new Date(summary.generated_at).toLocaleString('pt-br');
 
@@ -18,34 +20,48 @@ export function App() {
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('');
 
-  const filteredRinhers = (search
-    ? rinhers.filter((r) => {
-        if (typeof r.name !== 'string') {
-          return r['langs'].some(l => l.toLowerCase().includes(search.toLowerCase()))
-            || r['storages']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-            || r['messaging']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-            || r['load-balancers']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-            || r['other-technologies']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-            || r['source-code-repo'].toLowerCase().includes(search.toLowerCase());
+  const normalizedSearch = search.trim().toLowerCase();
+
+  const filteredRinhers = useMemo(() => {
+    const includesSearch = (value?: unknown) =>
+      (String(value ?? '')).toLowerCase().includes(normalizedSearch);
+
+    const matched = rinhers.filter((rinher) => {
+      if (!normalizedSearch) return true;
+
+      if (includesSearch(rinher.name)) return true;
+      if (includesSearch(rinher.technologies)) return true;
+      if (includesSearch(rinher.submission?.name)) return true;
+      if (includesSearch((rinher as unknown)['source-code-repo'])) return true;
+
+      const arrayKeys = [
+        'langs',
+        'storages',
+        'messaging',
+        'load-balancers',
+        'other-technologies',
+      ];
+
+      for (const key of arrayKeys) {
+        const maybeArray = (rinher as any)[key];
+        if (Array.isArray(maybeArray) && maybeArray.some((v: any) => includesSearch(v))) {
+          return true;
         }
+      }
 
-        return r.name.toLowerCase().includes(search.toLowerCase())
-          || r['langs'].some(l => l.toLowerCase().includes(search.toLowerCase()))
-          || r['storages']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-          || r['messaging']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-          || r['load-balancers']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-          || r['other-technologies']?.some(l => l.toLowerCase().includes(search.toLowerCase()))
-          || r['source-code-repo'].toLowerCase().includes(search.toLowerCase());
-      })
-    : rinhers) as Rinher[];
+      return false;
+    });
 
-  const hasResults = filteredRinhers.length > 0;
+    if (!sort) return matched;
 
-  if (sort) {
-    filteredRinhers.sort((a, b) => {
+    const sorted = [...matched];
+
+    sorted.sort((a, b) => {
       if (sort === 'p99') {
-        // Lower is better
-        return (Number(a.partialResults?.p99?.replace('ms', '')) || 99999) - (Number(b.partialResults?.p99?.replace('ms', '')) || 99999);
+        // Lower is better. strip 'ms' and fallback to big number
+        const aVal = Number(a.partialResults?.p99?.replace?.('ms', '')) || 9999999;
+        const bVal = Number(b.partialResults?.p99?.replace?.('ms', '')) || 9999999;
+        return aVal - bVal;
       }
       if (sort === 'bonus') {
         return (Number(b.partialResults?.bonus) || 0) - (Number(a.partialResults?.bonus) || 0);
@@ -58,7 +74,11 @@ export function App() {
       }
       return 0;
     });
-  }
+
+    return sorted;
+  }, [normalizedSearch, sort]);
+
+  const hasResults = filteredRinhers.length > 0;
 
   return (
     <>
@@ -87,7 +107,7 @@ export function App() {
         <ul className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4">
           {
             filteredRinhers.map((rinher, idx) => (
-              <RinherCard key={`${rinher['source-code-repo']}#${String(idx)}`} rinher={rinher} />
+              <RinherCard key={idx} rinher={rinher} />
             ))
           }
         </ul>

@@ -28,21 +28,33 @@ function normalizeLangName(lang: string) {
 }
 
 export function preprocessRinher(rinher: Rinher): PreprocessedRinher {
-  const technologies = [
-    ...rinher.langs ? rinher.langs.map(normalizeLangName) : [],
-    ...rinher.storages ? rinher.storages.map(s => s.toLowerCase()) : [],
-    ...rinher['load-balancers'] ? rinher['load-balancers'].map(l => l.toLowerCase()) : [],
-    ...rinher.messaging ? rinher.messaging.map(m => m.toLowerCase()) : [],
-    ...rinher['other-technologies'] ? rinher['other-technologies'].map(o => o.toLowerCase()) : [],
-  ].join(',').replace(',,', ',');
+  const technologies: string[] = [];
 
-  // e.g. /kauefraga/esquilo-aniquilador
-  //      ^0   ^1           ^2
-  const githubUser = rinher['source-code-repo'].includes('https://')
-    ? new URL(rinher['source-code-repo']).pathname.split('/')[1]
-    : '';
+  if (rinher.langs && rinher.langs instanceof Array) {
+    technologies.push(...rinher.langs.map(normalizeLangName));
+  }
+  if (rinher.storages && rinher.storages instanceof Array) {
+    technologies.push(...rinher.storages.map(s => s.toLowerCase()));
+  }
+  if (rinher['load-balancers'] && rinher['load-balancers'] instanceof Array) {
+    technologies.push(...rinher['load-balancers'].map(l => l.toLowerCase()));
+  }
+  if (rinher.messaging && rinher.messaging instanceof Array) {
+    technologies.push(...rinher.messaging.map(m => m.toLowerCase()));
+  }
+  if (rinher['other-technologies'] && rinher['other-technologies'] instanceof Array) {
+    technologies.push(...rinher['other-technologies'].map(o => o.toLowerCase()));
+  }
 
-  const profileImage = `https://github.com/${githubUser}.png`;
+  let githubUser: string | undefined;
+
+  if (rinher['source-code-repo'] && rinher['source-code-repo'].includes('https://')) {
+    // e.g. /kauefraga/esquilo-aniquilador
+    //      ^0   ^1           ^2
+    githubUser = new URL(rinher['source-code-repo']).pathname.split('/')[1];
+  }
+
+  const profileImage = githubUser ? `https://github.com/${githubUser}.png` : '/icon.png';
 
   // e.g. /zanfranceschi/rinha-de-backend-2025/main/participantes/alexroza-rs/info.json
   //      ^0   ^1               ^2              ^3       ^4          ^5           ^6
@@ -52,7 +64,8 @@ export function preprocessRinher(rinher: Rinher): PreprocessedRinher {
 
   return {
     ...rinher,
-    technologies,
+    social: rinher.social ? [...rinher.social] : [],
+    technologies: technologies.join(',').replace(',,', ','),
     profileImage,
     submission: {
       name: submissionName,
