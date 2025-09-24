@@ -7,7 +7,7 @@ export type Rinher = {
   'load-balancers'?: string[];
   'messaging'?: string[];
   'other-technologies'?: string[];
-  'partialResults'?: Record<string, string | undefined>;
+  'partial-results'?: Record<string, string | undefined>;
   '_metadata': {
     source_url: string;
     downloaded_at: string;

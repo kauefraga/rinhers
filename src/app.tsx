@@ -59,18 +59,18 @@ export function App() {
     sorted.sort((a, b) => {
       if (sort === 'p99') {
         // Lower is better. strip 'ms' and fallback to big number
-        const aVal = Number(a.partialResults?.p99?.replace?.('ms', '')) || 9999999;
-        const bVal = Number(b.partialResults?.p99?.replace?.('ms', '')) || 9999999;
+        const aVal = Number(a['partial-results']?.p99?.replace?.('ms', '')) || 9999999;
+        const bVal = Number(b['partial-results']?.p99?.replace?.('ms', '')) || 9999999;
         return aVal - bVal;
       }
       if (sort === 'bonus') {
-        return (Number(b.partialResults?.bonus) || 0) - (Number(a.partialResults?.bonus) || 0);
+        return (Number(b['partial-results']?.bonus) || 0) - (Number(a['partial-results']?.bonus) || 0);
       }
       if (sort === 'multa') {
-        return (Number(b.partialResults?.multa) || 0) - (Number(a.partialResults?.multa) || 0);
+        return (Number(b['partial-results']?.multa) || 0) - (Number(a['partial-results']?.multa) || 0);
       }
       if (sort === 'lucro') {
-        return (Number(b.partialResults?.lucro) || 0) - (Number(a.partialResults?.lucro) || 0);
+        return (Number(b['partial-results']?.lucro) || 0) - (Number(a['partial-results']?.lucro) || 0);
       }
       return 0;
     });

@@ -11,7 +11,7 @@ interface PartialResultsModalProps {
 export function PartialResultsModal({ show, onClose, rinher }: PartialResultsModalProps) {
   if (!show) return null;
 
-  const { name, langs, partialResults } = rinher;
+  const { name, langs, 'partial-results': partialResults } = rinher;
   const chartData = partialResults
     ? [
         { name: 'p99', value: Number(partialResults.p99?.replace('ms', '')) || 0 },

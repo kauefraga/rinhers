@@ -17,7 +17,7 @@ export function RinherCard({ rinher }: RinherCardProps) {
     technologies,
     'source-code-repo': sourceCodeRepo,
     social,
-    partialResults,
+    'partial-results': partialResults,
   } = rinher;
 
   return (

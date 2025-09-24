@@ -1,7 +1,7 @@
 import type { Rinher } from '../types/rinher';
 import { resultDescriptions } from '../utils/result-descriptions';
 
-export function PartialResultsList({ partialResults }: { partialResults: Rinher['partialResults'] }) {
+export function PartialResultsList({ partialResults }: { partialResults: Rinher['partial-results'] }) {
   if (!partialResults) return null;
 
   return (
